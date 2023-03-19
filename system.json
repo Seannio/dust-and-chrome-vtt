@@ -1,0 +1,34 @@
+{
+  "id": "dustandchrome",
+  "title": "Boilerplate",
+  "description": "A homebrew tabletop setting for Dust and Chrome, a Post-Cyberpunk RPG",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.287",
+    "maximum": 10
+  },
+  "authors": [{
+    "name": "Conto"
+  }],
+  "esmodules": ["module/dustandchrome.mjs"],
+  "styles": ["css/dustandchrome.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "purchase",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "to be added lol",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
+}
