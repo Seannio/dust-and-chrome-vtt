@@ -4,11 +4,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-
-.window-content {
-  background: red !important;
-}
-
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
@@ -235,6 +230,19 @@
   /* ----------------------------------------- */
   /* Example style for DustChrome (can be removed if not needed) */
 }
+
+
+
+
+.actor {
+  background: aqua;
+}
+
+
+
+
+
+
 .dustandchrome .item-form {
   font-family: "Roboto", sans-serif;
 }
