@@ -235,7 +235,7 @@
 }
 
   /* Background changing for actor sheets AYYYYY. Cool. */
-.dustandchrome .actor .window-content {
+.actor .window-content {
   background: aqua;
   font-family: 'Roboto Mono', monospace;
 }
