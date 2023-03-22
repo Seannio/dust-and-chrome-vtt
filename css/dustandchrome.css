@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
@@ -231,20 +234,15 @@
   /* Example style for DustChrome (can be removed if not needed) */
 }
 
-
-
-
-.actor .window-content {
+  /* Background changing for actor sheets AYYYYY. Cool. */
+.dustandchrome .actor .window-content {
   background: aqua;
+  font-family: 'Roboto Mono', monospace;
 }
 
 
-
-
-
-
 .dustandchrome .item-form {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 .dustandchrome .sheet-header {
   -webkit-box-flex: 0;
