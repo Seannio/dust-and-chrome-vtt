@@ -74,6 +74,13 @@
             {{/each}}
           </div>
         </aside>
+        
+        <!--
+        Hooks.once('preCreateChatMessage', (message)=>{
+          message.data.update({content: `${message.roll.formula}<br>Rolled ${message.roll.terms[0].results[0].result}<br>${message.roll.total?'Success':'Failure'}` })
+        })
+        await new Roll('1d100cs<=25').toMessage();
+        -->
 
         {{!-- For the main features list, span the right two columns --}}
         <section class="main grid-span-2">

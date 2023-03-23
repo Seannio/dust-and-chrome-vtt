@@ -225,19 +225,22 @@ export class DustChromeActorSheet extends ActorSheet {
       let label = dataset.label ? `[ability] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
 
-      if(roll.total == 1) {
-        ChatMessage.create({content: "No Wild Magic Surge occurs and you can breathe calmly again..."});
+      if(roll.total) {
+        ChatMessage.create({content: "Rolled: 1"});
+        console.log("babsbdhbfrhbgr");
+        console.log(roll.total);
+        console.log(roll.result);
       }
+
       else {
-        ChatMessage.create({
-          content: "Wild Magic Surges after you cast this spell ... something happens...",
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        })
+        ChatMessage.create({content: "Rolled: 0"});
+        console.log("gtrgrtgurthgrt");
+        console.log(roll.total);
+        console.log(roll.result);
       }
 
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        content: "You've done a roll!",
         flavor: label,
         rollMode: game.settings.get('core', 'rollMode'),
       });
