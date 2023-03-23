@@ -26,13 +26,13 @@ Hooks.once('init', async function() {
   CONFIG.BOILERPLATE = BOILERPLATE;
 
   /**
-   * Set an initiative formula for the system
+   * Set an initiative formula for the system ( not needed )
    * @type {String}
    */
-  CONFIG.Combat.initiative = {
+  /* CONFIG.Combat.initiative = {
     formula: "1d20 + @abilities.dex.mod",
     decimals: 2
-  };
+  }; */
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = DustChromeActor;
