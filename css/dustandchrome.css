@@ -240,10 +240,14 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+.item .window-content {
+  background: slategray;
+}
 
 .dustandchrome .item-form {
   font-family: 'Roboto Mono', monospace;
 }
+
 .dustandchrome .sheet-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 auto;
