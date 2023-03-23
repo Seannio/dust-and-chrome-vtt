@@ -66,9 +66,10 @@
           <div class="abilities flexcol">
             {{#each system.abilities as |ability key|}}
             <div class="ability flexrow flex-group-center">
+              <!-- 1d100 + &&total;@{ANI}:SUCCESS,@{ANI}+1:FAILURE&&-->
               <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="1d100cf<={{ability.value}}" data-target="{{ability.value}}" data-label="{{ability.label}}">{{ability.label}}</label>
               <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <span class="ability-mod rollable" data-roll="1d100cf<={{ability.value}}" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+              <span class="ability-mod rollable" data-roll="1d100cf<={{ability.value}}" data-target="{{ability.value}}" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
             </div>
             {{/each}}
           </div>

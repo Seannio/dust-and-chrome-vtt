@@ -199,6 +199,13 @@ export class DustChromeActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
+
+ /*
+  Hooks.once('preCreateChatMessage', (message)=>{
+    message.data.update({content: `${message.roll.formula}<br>Rolled ${message.roll.terms[0].results[0].result}<br>${message.roll.total?'Success':'Failure'}` })
+  })
+  await new Roll('1d100cs<=25').toMessage();
+*/
   _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
@@ -217,6 +224,14 @@ export class DustChromeActorSheet extends ActorSheet {
     if (dataset.roll) {
       let label = dataset.label ? `[ability] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
+
+      if(roll.total) {
+        ChatMessage.create({content: "No Wild Magic Surge occurs and you can breathe calmly again..."});
+      }
+      else {
+        ChatMessage.create({content: "Wild Magic Surges after you cast this spell ... something happens..."})
+      }
+
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label,
